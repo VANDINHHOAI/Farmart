@@ -15,6 +15,12 @@ let swiperFlashDeal = new Swiper('.flash-deal__swiper', {
     loop: true,
     grabCursor: false,
     slidesPerView: 5,
+    centeredSlides: 'auto',
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 
 });
 
