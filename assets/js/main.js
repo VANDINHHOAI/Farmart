@@ -1,25 +1,43 @@
 /*=============== HOME SWIPER ===============*/
 let swiperHome = new Swiper('.home__swiper', {
-    loop: true,
-    grabCursor: true,
+
+    grabCursor: false,
     slidesPerView: 'auto',
 
-    autoplay: {
-        delay: 10000,
-        disableOnInteraction: false,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
 
 
 let swiperFlashDeal = new Swiper('.flash-deal__swiper', {
-    loop: true,
     grabCursor: false,
-    slidesPerView: 5,
-    centeredSlides: 'auto',
+    slidesPerView: 'auto',
 
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+
+    pagination: {
+        el: ".swiper-pagination_sale",
+        clickable: true,
+    },
+
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 0,
+        },
     },
 
 });
@@ -30,11 +48,20 @@ let swiperFreshFood = new Swiper('.banner__swiper', {
     grabCursor: false,
     slidesPerView: 1,
 
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
 });
 
 let swiperProductRecommend= new Swiper('.products__recommend__swiper', {
-    loop: true,
     grabCursor: false,
     slidesPerView: 1,
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 
 });
