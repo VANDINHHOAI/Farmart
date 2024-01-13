@@ -502,6 +502,8 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .product__item .product__name {
@@ -551,6 +553,30 @@
     border-radius: 4px;
     transition: .2s;
     margin-top: 10px;
+}
+
+.btn__actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: .75rem;
+    top: 2rem;
+    right: -3.5rem;
+    transition: right .5s;
+}
+
+.btn__actions button {
+    background: none;
+    font-size: 1.25rem;
+    color: #fa532c;
+    cursor: pointer;
+    border: none;
+}
+
+.product-grid .product__item:hover .btn__actions {
+    right: 5px;
 }
 
 .products__recommend .product__item {
