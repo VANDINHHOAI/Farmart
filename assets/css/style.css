@@ -167,6 +167,14 @@
   object-fit: cover;
 }
 
+.home__article {
+    position: relative;
+}
+
+.slide__content {
+    position: absolute;
+}
+
 .flash-deal {
     padding: 90px;
 }
@@ -188,9 +196,18 @@
     font-size: 25px;
 }
 
-.flash-deal .heading .title .countdown {
+.flash-deal .heading .title .countdown__wrapper {
     display: flex;
     align-items: center;
+    gap: 0 10px;
+}
+
+.countdown__wrapper .header-countdown {
+    background: #e84506;
+    padding: 8px;
+    color: var(--text-white);
+    font-weight: 600;
+    border-radius: 4px;
 }
 
 .flash-deal__container {
@@ -565,6 +582,7 @@
     top: 2rem;
     right: -3.5rem;
     transition: right .5s;
+    opacity: 0;
 }
 
 .btn__actions button {
@@ -577,6 +595,7 @@
 
 .product-grid .product__item:hover .btn__actions {
     right: 5px;
+    opacity: 1;
 }
 
 .products__recommend .product__item {

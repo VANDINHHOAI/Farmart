@@ -65,3 +65,42 @@ let swiperProductRecommend= new Swiper('.products__recommend__swiper', {
     },
 
 });
+
+function updateCountdown() {
+   
+    const hoursElement = document.getElementById('hours');
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+
+   
+    let hours = parseInt(hoursElement.textContent);
+    let minutes = parseInt(minutesElement.textContent);
+    let seconds = parseInt(secondsElement.textContent);
+
+   
+    if (seconds > 0) {
+      seconds--;
+    } else {
+      seconds = 59;
+      if (minutes > 0) {
+        minutes--;
+      } else {
+        minutes = 59;
+        if (hours > 0) {
+          hours--;
+        } else {
+         
+          clearInterval(countdownInterval);
+          alert('Countdown has ended!');
+        }
+      }
+    }
+
+  
+    hoursElement.textContent = hours.toString().padStart(2, '0');
+    minutesElement.textContent = minutes.toString().padStart(2, '0');
+    secondsElement.textContent = seconds.toString().padStart(2, '0');
+  }
+
+
+  const countdownInterval = setInterval(updateCountdown, 1000);
